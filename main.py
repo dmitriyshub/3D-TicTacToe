@@ -7,7 +7,13 @@ from functions import *
 
 if __name__ == '__main__':
     player_a, player_b = define_players()
-    first_player = random_player(player_a, player_b))
+    first_player = random_player(player_a, player_b)
+
+
+    turn = 1
+    while turn <= 74:
+        pass
+
 
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

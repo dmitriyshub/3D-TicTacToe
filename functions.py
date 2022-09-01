@@ -9,8 +9,14 @@ def define_players():
     return player_a, player_b
 
 def random_player(player_a,player_b):
-    player_choice = random.choice([player_a, player_b])
-    return player_choice
+    """
+    This function choose a random player
+    :param player_a: name of player 1
+    :param player_b: name of player 2
+    :return: first player to play
+    """
+    first_player = random.choice([player_a, player_b])
+    return first_player
 
 def turn_check(turn):
     if turn % 2 == 0:
@@ -19,6 +25,10 @@ def turn_check(turn):
         return 'O'
 
 def choice_and_check():
+    """
+    This function choose
+    :return:
+    """
     while True:
         # Input from user
         board_choice, square_choice = input("Which board (1-3) ? "), input("Which square (1-9)? ")
