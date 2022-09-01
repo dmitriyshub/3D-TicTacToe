@@ -1,3 +1,15 @@
+import random
+
+def players():
+    """
+    this function ask for player names and make a random choice
+    :return: player_choice variable - player name
+    """
+    player_a, player_b = input("Player one name?"), input("Player two name?")
+    player_choice = random.choice([player_a, player_b])
+    return player_choice
+
+
 def choice():
     while True:
         # Input from user
