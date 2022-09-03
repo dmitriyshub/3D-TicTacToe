@@ -8,7 +8,7 @@ def define_players():
     player_a, player_b = input("Player one name?"), input("Player two name?")
     return player_a, player_b
 
-def random_player(player_a,player_b):
+def random_players(player_a,player_b):
     """
     This function choose a random player
     :param player_a: name of player 1
@@ -16,7 +16,11 @@ def random_player(player_a,player_b):
     :return: first player to play
     """
     first_player = random.choice([player_a, player_b])
-    return first_player
+    if first_player == player_a:
+        second_player = player_b
+    else:
+        second_player = player_a
+    return first_player, second_player
 
 def turn_check(turn):
     if turn % 2 == 0:

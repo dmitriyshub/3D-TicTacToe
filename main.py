@@ -7,7 +7,7 @@ from functions import *
 
 if __name__ == '__main__':
     player_a, player_b = define_players()
-    first_player = random_player(player_a, player_b)
+    player_a, player_b = random_players(player_a, player_b)
 
 
     turn = 1
