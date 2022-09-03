@@ -1,4 +1,19 @@
 import random
+import threading
+import sched, time
+
+s = sched.scheduler(time.time, time.sleep)
+def do_something(sc):
+    print("Doing stuff...")
+    # do your stuff
+    sc.enter(1, 1, do_something, (sc,))
+
+s.enter(1, 1, do_something, (s,))
+s.run()
+
+
+
+
 
 def define_players():
     """
@@ -24,9 +39,9 @@ def random_players(player_a,player_b):
 
 def turn_check(turn):
     if turn % 2 == 0:
-        return 'X'
+        return first_player
     else:
-        return 'O'
+        return second_player
 
 def choice_and_check():
     """
@@ -47,5 +62,6 @@ def choice_and_check():
 
         else:
             return board_choice, square_choice
+
 
 
